@@ -1,43 +1,34 @@
 # Branch
-
 ## Show me branches
+`git branch -l -r -a`
 
-```
-git branch -l -r -a
-```
-
-| Flag          | Result                                       |
-| ------------- | -------------------------------------------- |
-| -l            | Local braches                                |
-| -r            | Remote braches                               |
-| -a            | All branches                                 |
-| \| grep "axe" | Filter results to only those including "axe" |
+| Flag              | Result                                       |
+|-------------------|----------------------------------------------|
+| -l                | Local branches                               |
+| -r                | Remote branches                              |
+| -a                | All branches                                 |
+| &#124; grep "axe" | Filter results to only those including "axe" |
+| &#124; head -10   | Print first 10 results to terminal           |
 
 ## Configs
 
-```
-git config --global branch.sort -committerdate
-```
+`git config --global branch.sort -committerdate`
 
-Displays braches by most recently modified, instead of alphabetically
+Display branches by most recently modified, instead of alphabetically
 
 # Log
 
-```
-git log
-```
+`git log`
 
 Shows you a chronological list of commits from your current branch starting from most recent
 
---oneline
+`git log --oneline`
 
 this flag gives you a more dense output and is helpful for grep-ing
 
 # Prune
 
-```
-git fetch -p
-```
+`git fetch -p`
 
 Prune will delete branches locally, that have also been deleted in the remote, and have no local changes
 
@@ -71,33 +62,25 @@ your commits are now squished, verify with git log
 
 # Switch to previous branch
 
-```
-git switch -
-```
+`git switch -`
 
-you can use this command to go back and forth between two branches if you need to review some code and then resume your work, you don't need to memorise or re-find your working brach
+you can use this command to go back and forth between two branches if you need to review some code and then resume your work, you don't need to memorise or re-find your working branch
 
 # Auto setup remote
 
-```
-git config --global --add --bool push.autoSetupRemote true
-```
+`git config --global --add --bool push.autoSetupRemote true`
 
 If you have made a branch on local and tried to push it to remote, this will automatically set remote as the upstream
 
 # Reuse Recorded Resolution
 
-```
-git config --global rerere.enabled true
-```
+`git config --global rerere.enabled true`
 
 Remember manual merge resolutions and auto-apply in future if seen again
 
 # Maintenance
 
-```
-git maintenance start
-```
+`git maintenance start`
 
 Does a bunch of useful stuff, the headlines are
 
@@ -106,7 +89,7 @@ Does a bunch of useful stuff, the headlines are
 
 also
 
-- does other useful things I don't know about but I know they are harmless to your current workflow, such as
+- does other useful things I don't know about, but I know they are harmless to your current workflow, such as
   - garbage collection disabled
   - commit graph updates hourly
   - loose objects cleaned daily
