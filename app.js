@@ -17,6 +17,16 @@ app.get("/users/:userId", (req, res) => {
   }
 });
 
+app.delete("/users/:userId", (req, res) => {
+  const { params: { userId } = {} } = req;
+
+  if (userId) {
+    res.send(`${userId} deleted.`, 200);
+  } else {
+    res.status(400).send();
+  }
+});
+
 const port = 1234;
 app.listen(port);
 
