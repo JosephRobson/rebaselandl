@@ -10,6 +10,7 @@ app.get("/users/:userId", (req, res) => {
   const { params: { userId } = {} } = req;
 
   if (userId) {
+    // Fetch user info from db
     res.send(userId);
   } else {
     res.status(400).send();
