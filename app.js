@@ -3,7 +3,8 @@ import express from "express";
 const app = express();
 
 app.get("/", (req, res) => {
-  res.send("Hello World!");
+  const response = "Hello World!";
+  res.send(response);
 });
 
 app.get("/users/:userId", (req, res) => {

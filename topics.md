@@ -9,6 +9,7 @@
 | -a                | All branches                                 |
 | &#124; grep "axe" | Filter results to only those including "axe" |
 | &#124; head -10   | Print first 10 results to terminal           |
+| &#124; tail -10   | Print last 10 results to terminal            |
 
 ## Configs
 
@@ -108,11 +109,12 @@ shows you your personal history of commands in git, is comprehensive and has hel
 If you need to make a branch
 
 ```
-git fetch
 git switch main
 git pull
 git switch -c DDSP-1234-do-some-stuff
+
 <make changes>
+
 git commit -m "test(1234): tested a feature"
 git push
 ```
@@ -122,6 +124,7 @@ If you need to rebase a branch you are currently on
 ```
 git fetch
 git rebase origin/main
+
 <hope for no conflicts>
 ```
 
